@@ -10,12 +10,7 @@ export const PublicRoute = ({ component: Component, props: Props, ...misc }) => 
 };
 
 export const PrivateRoute = ({ authenticated, component: Component, props: Props, ...misc }) => {
-	return (
-		<Route
-			render={(props: any) => (authenticated ? <Component {...props} {...Props} /> : <Redirect to='/login' />)}
-			{...misc}
-		/>
-	);
+	return <Route render={(props: any) => (authenticated ? <Component {...props} {...Props} /> : <Redirect to='/login' />)} {...misc} />;
 };
 
 export const ProtectedRoute = ({ canActivate, component: Component, props: Props, ...misc }) => {

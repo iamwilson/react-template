@@ -10,4 +10,3 @@ Name's build architecture comprises of the following:
 - Mock services with API simulations
 - React 17+ (Fiber)
 - Typescript
-
