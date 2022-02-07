@@ -47,8 +47,7 @@ const User: React.FC<IUserProps> = (props: any) => {
 								id='language'
 								className='lang-select ml-3'
 								onChange={(e) => props.switchLanguage(e)}
-								value={props?.langCode ? props.langCode : ''}
-							>
+								value={props?.langCode ? props.langCode : ''}>
 								<option value='en'>English</option>
 								<option value='sw'>Svenska</option>
 							</select>
@@ -63,8 +62,7 @@ const User: React.FC<IUserProps> = (props: any) => {
 								id='theme'
 								className='theme-select ml-4'
 								onChange={(e) => props.switchTheme(e)}
-								value={props?.theme ? props.theme : ''}
-							>
+								value={props?.theme ? props.theme : ''}>
 								<option value='dark'>Dark</option>
 								<option value='light'>Light</option>
 							</select>

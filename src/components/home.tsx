@@ -77,13 +77,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 					<div className={this.state.toggleSidePanel === false ? 'content-container' : 'content-container-full'}>
 						<div className='content-wrapper'>
 							<Switch>
-								<PrivateRoute
-									authenticated={true}
-									exact={true}
-									path={routePath.AppRoutes.Home}
-									component={Default}
-									props={this.props}
-								/>
+								<PrivateRoute authenticated={true} exact={true} path={routePath.AppRoutes.Home} component={Default} props={this.props} />
 								<PublicRoute
 									path={routePath.AppRoutes.NotFound}
 									component={NotFound}
