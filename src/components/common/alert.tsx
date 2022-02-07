@@ -17,13 +17,7 @@ const Alert: React.FC<IAlertProps> = (props: any) => {
 					<strong>{props.title}</strong>
 					<span>:</span>
 					<span> {props.message}</span>
-					<button
-						type='button'
-						className='close'
-						data-dismiss='alert'
-						aria-label='Close'
-						onClick={(e) => props.closeAlert(e)}
-					>
+					<button type='button' className='close' data-dismiss='alert' aria-label='Close' onClick={(e) => props.closeAlert(e)}>
 						<span aria-hidden='true'>&times;</span>
 					</button>
 				</div>
