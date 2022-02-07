@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.app-container {
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+
+	background: $background_color;
+	overflow-x: hidden;
+	position: absolute;
+	font-family: 'SF Pro Text', 'Myriad Set Pro', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+}
+
+.content-container {
+	transition: all 0.5s ease;
+
+	top: $app-header-height;
+	right: 0;
+	bottom: 0;
+	left: 240px;
+	overflow: auto;
+	position: absolute;
+	background: $background_color;
+	overflow-x: hidden;
+	.content-wrapper {
+		margin: 24px;
+	}
+}
+
+.content-container-full {
+	transition: all 0.5s ease;
+
+	top: $app-header-height;
+	right: 0;
+	bottom: 0;
+	left: 77px;
+	overflow: auto;
+	position: absolute;
+	background: $background_color;
+	border-left: 1px solid #cbcbcb;
+	overflow-x: hidden;
+	.content-wrapper {
+		margin: 24px;
+	}
+}

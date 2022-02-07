@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"outDir": "dist",
+		"rootDir": ".",
+		"baseUrl": ".",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "es5",
+		"lib": ["dom", "es2015", "es6", "es7"],
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"removeComments": true,
+		"importHelpers": true,
+		"noImplicitReturns": false,
+		"noImplicitThis": false,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
+		"esModuleInterop": true,
+		"paths": {
+			"@utils/*": ["./src/utils/*"],
+			"@services/*": ["./src/services/*"],
+			"@models/*": ["./src/models/*"],
+			"@actions/*": ["./src/actions/*"],
+			"@reducers/*": ["./src/reducers/*"],
+			"@interfaces/*": ["./src/interfaces/*"],
+			"@typings/*": ["./src/@types/*"],
+			"@enums/*": ["./src/enums/*"],
+			"@constants/*": ["./src/constants/*"],
+			"@components/*": ["./src/components/*"],
+			"@images/*": ["./src/assets/images/*"],
+			"@icons/*": ["./src/assets/icons/*"],
+			"@svgs/*": ["./src/assets/svgs/*"],
+			"@lang/*": ["./src/assets/languages/*"],
+			"@configs": ["./src/configs/config.ts"],
+			"@styles/*": ["./src/styles/*"]
+		}
+	},
+	"exclude": ["dist", "node_modules", "webpack", "coverage", "**/*.test.tsx"],
+	"types": ["typePatches"]
+}

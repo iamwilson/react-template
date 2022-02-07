@@ -1,0 +1,12 @@
+**/*.conf
+**/*.md
+**/*.json
+**/*.config.*
+dist
+node_modules
+scripts
+src/index.html
+src/favicon.ico
+src/assets/*
+src/services/mock/data/*
+src/styles/*

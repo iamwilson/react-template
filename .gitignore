@@ -1,0 +1,19 @@
+# compiled output
+dist
+coverage
+
+# dependencies
+node_modules
+
+# editors
+.idea
+.vscode
+.vs
+
+# misc
+*.bin
+*.lock
+*.properties
+
+# system files
+.DS_Store

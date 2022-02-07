@@ -1,0 +1,58 @@
+// break points
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+
+// base pallete
+$black: black;
+$white: #fff;
+$red: #ff3b30;
+$green: #44c35a;
+$blue: #007bff;
+
+// seb colors
+$seb-blue: #41b0ee;
+$seb-dark-blue-1: #0092e1;
+$seb-dark-blue-2: #007ac7;
+
+$seb-green: #60cd18;
+$seb-dark-green-1: #45b400;
+$seb-dark-green-2: #379d00;
+
+$seb-purple: #673ab6;
+$seb-dark-purple-1: #4f2c99;
+$seb-dark-purple-2: #3f2587;
+
+$seb-red: #f03529;
+$seb-dark-red-1: #d81a1a;
+$seb-dark-red-2: #bb000c;
+
+$seb-yellow: #ffc500;
+$seb-dark-yellow-1: #ffb400;
+$seb-dark-yellow-2: #f8a000;
+
+// general
+$app-header-height: 58px;
+$active-menu-background: #5a5a5a;
+$alert-background: #fffbdd;
+$background_color: #f2f2f2;
+$border-radius: 4px;
+$container-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+	0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+$component-margin-top: 14px;
+$dark-gray: #d7d7d7;
+$gray-border: #e8e8e8;
+$gray-hover: #ebebeb;
+$green-pulse: rgb(12, 236, 12);
+$hover-menu-background: #3b3b3b;
+$light-box: rgba(0, 0, 0, 0.5);
+$loader-border: #f3f3f3;
+$menu-text-color: #d3d3d3;
+$menu-disabled-text-color: #8a8787;
+$outline_color: #333; //#2b0342;
+$text-color: #b2b2b2;
+$side-panel-width: 240px;

@@ -1,0 +1,189 @@
+@import './variables.scss';
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+	.header-container {
+		color: $white;
+		height: $app-header-height;
+		background-color: $outline_color;
+		border-bottom: 1.25px solid $outline_color;
+
+		.app-name {
+			color: $white;
+			font-size: 18px;
+			margin: -8px 0px 0px 80px;
+		}
+
+		.app-name-container {
+			font-weight: 400;
+			height: $app-header-height;
+			.home-anchor {
+				font-size: 18px;
+				font-weight: 800;
+				color: $text-color;
+				text-decoration: none;
+				padding: 12px 0px 10px 34px;
+
+				> .app-logo {
+					height: 40px;
+					float: left;
+					margin: 8px 0px 0px 16px;
+				}
+			}
+		}
+
+		.fa-bars {
+			transform: scaleX(1.4);
+		}
+
+		.btn-side-panel {
+			border-color: $outline_color;
+			margin: 8px 0px 10px 30px;
+		}
+
+		.btn-side-panel:hover {
+			color: white;
+		}
+	}
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) {
+	.header-container {
+		color: $white;
+		height: $app-header-height;
+		background-color: $outline_color;
+		border-bottom: 1.25px solid $black;
+
+		.app-name {
+			color: $white;
+			font-size: 18px;
+			margin: -8px 0px 0px 80px;
+		}
+
+		.app-name-container {
+			font-weight: 400;
+			height: $app-header-height;
+			border-bottom: 1.15px solid $black;
+
+			.home-anchor {
+				font-size: 18px;
+				font-weight: 800;
+				color: $text-color;
+				text-decoration: none;
+				padding: 12px 0px 10px 34px;
+
+				> .app-logo {
+					height: 45px;
+					float: left;
+					margin: 6px 0px 0px 16px;
+				}
+			}
+		}
+
+		.fa-bars {
+			transform: scaleX(1.4);
+		}
+
+		.btn-side-panel {
+			border-color: $outline_color;
+			margin: 8px 0px 10px 30px;
+		}
+
+		.btn-side-panel:hover {
+			color: white;
+		}
+	}
+}
+
+/* iPad Portrait */
+@media only screen and (device-width: 768px) {
+	.header-container {
+		color: $white;
+		height: $app-header-height;
+		background-color: $outline_color;
+		border-bottom: 1.25px solid $black;
+
+		.app-name {
+			color: $white;
+			font-size: 18px;
+			margin: -8px 0px 0px 80px;
+		}
+
+		.app-name-container {
+			font-weight: 400;
+			height: $app-header-height;
+			border-bottom: 1.15px solid $black;
+
+			.home-anchor {
+				font-size: 18px;
+				font-weight: 800;
+				color: $text-color;
+				text-decoration: none;
+				padding: 12px 0px 10px 34px;
+
+				> .app-logo {
+					height: 45px;
+					float: left;
+					margin: 6px 0px 0px 16px;
+				}
+			}
+		}
+
+		.fa-bars {
+			transform: scaleX(1.4);
+		}
+
+		.btn-side-panel {
+			border-color: $outline_color;
+			margin: 8px 0px 10px 30px;
+		}
+
+		.btn-side-panel:hover {
+			color: white;
+		}
+	}
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 640px) {
+	.header-container {
+		color: $white;
+		height: $app-header-height;
+		background-color: $outline_color;
+		border-bottom: 1.25px solid $black;
+
+		.app-name {
+			display: none;
+		}
+
+		.app-name-container {
+			font-weight: 400;
+			height: $app-header-height;
+			border-bottom: 1.15px solid $black;
+
+			.home-anchor {
+				font-size: 18px;
+				font-weight: 800;
+				color: $text-color;
+				text-decoration: none;
+				padding: 12px 0px 10px 34px;
+
+				> .app-logo {
+					height: 45px;
+					float: left;
+					margin: 6px 0px 0px 94px;
+				}
+			}
+		}
+
+		.fa-bars {
+			transform: scaleX(1.5);
+		}
+
+		.btn-side-panel {
+			position: absolute;
+			margin: 7px 0px 0px 27px;
+		}
+	}
+}

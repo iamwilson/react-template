@@ -1,0 +1,54 @@
+// Mavericks - ES LintConfiguraiton
+// Author    - John Muriuki(S1475B)
+
+// Control parameters for the rulesets off-0, warn-1, error-2
+
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": ["plugin:react/recommended", "google"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"tsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"comma-dangle": [
+			"off",
+			{
+				"arrays": "never",
+				"objects": "never",
+				"imports": "never",
+				"exports": "never",
+				"functions": "never"
+			}
+		],
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": "off",
+		"object-curly-spacing": ["off", "always"],
+		"operator-linebreak": ["off", "before"],
+		"max-len": ["off", { "code": 120 }, { "tabWidth": 3 }, { "ignoreComments": true }],
+		"no-invalid-this": "off",
+		"no-tabs": ["off", { "allowIndentationTabs": true }],
+		"no-unused-vars": ["off", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+		"require-jsdoc": [
+			"off",
+			{
+				"require": {
+					"FunctionDeclaration": false,
+					"MethodDefinition": false,
+					"ClassDeclaration": false,
+					"ArrowFunctionExpression": false,
+					"FunctionExpression": false
+				}
+			}
+		],
+		"quotes": ["warn", "single"]
+	}
+}

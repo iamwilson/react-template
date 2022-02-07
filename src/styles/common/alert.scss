@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+.alert-on {
+	margin: 20px 12px 15px 12px;
+	.alert {
+		background-color: $alert-background;
+		border-left: 8px solid $seb-yellow;
+		border-radius: $border-radius;
+		box-shadow: $container-shadow;
+	}
+}
+
+.alert-off {
+	display: none;
+}

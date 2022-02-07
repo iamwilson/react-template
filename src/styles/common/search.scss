@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.search-container {
+	padding: 8px 0px 0px 0px;
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 38%;
+	transform: translate(-50%, -50%);
+
+	.search-input {
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		font-size: 13px;
+		height: 32px;
+		padding-left: 10px;
+		width: 320px;
+		transform: scale(1.2);
+	}
+
+	.btn {
+		min-width: 42px !important;
+	}
+
+	.btn-search {
+		border-radius: 0px 2px 2px 0px;
+		border-bottom: 2px solid $dark-gray;
+		background-color: $dark-gray;
+		margin: 2px 0px 2px -28px;
+		transform: scale(0.85);
+		width: 4rem;
+		.fa-search {
+			transform: scale(1.5);
+		}
+	}
+}

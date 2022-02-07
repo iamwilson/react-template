@@ -1,0 +1,226 @@
+@import '../common/variables.scss';
+
+/* Desktop */
+@media only screen and (min-width: 1500px) {
+	.fifth-element-wrapper {
+		.fifth-element-1 {
+			float: left;
+			margin: 0px 805px 0px 120px;
+			transform: scale(0.925);
+		}
+	}
+	.login-container {
+		top: 50%;
+		left: 50%;
+		width: 20%;
+		padding: 20px;
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		transform: translate(-50%, -50%);
+
+		.login-wrapper {
+			padding: 20px;
+		}
+
+		.btn-login {
+			margin: 10px 0px 10px 0px;
+			width: -webkit-fill-available;
+		}
+
+		.login-masthead {
+			height: 60px;
+			color: #e6e6e6;
+			font-size: 18px;
+			font-weight: lighter;
+			background: $outline_color;
+			padding: 17px 0px 0px 40px;
+			margin: -21px -21px 10px -21px;
+			border-radius: $border-radius $border-radius 0px 0px;
+			> .app-logo {
+				width: 22px;
+				height: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+/* iPad Pro Landscape */
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+	.fifth-element-wrapper {
+		.fifth-element-1 {
+			float: left;
+			margin: 83px 332px 0px 215px;
+		}
+	}
+	.login-container {
+		top: 35%;
+		left: 50%;
+		width: 35%;
+		padding: 20px;
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		transform: translate(-50%, -50%);
+
+		.login-wrapper {
+			padding: 20px;
+		}
+
+		.btn-login {
+			margin: 10px 0px 10px 0px;
+			width: -webkit-fill-available;
+		}
+
+		.login-masthead {
+			height: 60px;
+			color: #e6e6e6;
+			font-size: 18px;
+			font-weight: lighter;
+			background: $outline_color;
+			padding: 17px 0px 0px 40px;
+			margin: -21px -21px 10px -21px;
+			border-radius: $border-radius $border-radius 0px 0px;
+			> .app-logo {
+				width: 22px;
+				height: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+/* iPad Pro Portrait */
+@media only screen and (device-width: 1024px) and (orientation: portrait) {
+	.fifth-element-wrapper {
+		.fifth-element-1 {
+			float: left;
+			transform: scale(0.925);
+		}
+	}
+	.login-container {
+		top: 30%;
+		left: 50%;
+		width: 35%;
+		padding: 20px;
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		transform: translate(-50%, -50%);
+
+		.login-wrapper {
+			padding: 20px;
+		}
+
+		.btn-login {
+			margin: 10px 0px 10px 0px;
+			width: -webkit-fill-available;
+		}
+
+		.login-masthead {
+			height: 60px;
+			color: #e6e6e6;
+			font-size: 18px;
+			font-weight: lighter;
+			background: $outline_color;
+			padding: 17px 0px 0px 40px;
+			margin: -21px -21px 10px -21px;
+			border-radius: $border-radius $border-radius 0px 0px;
+			> .app-logo {
+				width: 22px;
+				height: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+/* iPad Portrait */
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+	.fifth-element-wrapper {
+		.fifth-element-1 {
+			float: left;
+		}
+	}
+	.login-container {
+		top: 30%;
+		left: 50%;
+		width: 35%;
+		padding: 20px;
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		transform: translate(-50%, -50%);
+
+		.login-wrapper {
+			padding: 20px;
+		}
+
+		.btn-login {
+			margin: 10px 0px 10px 0px;
+			width: -webkit-fill-available;
+		}
+
+		.login-masthead {
+			height: 60px;
+			color: #e6e6e6;
+			font-size: 18px;
+			font-weight: lighter;
+			background: $outline_color;
+			padding: 17px 0px 0px 40px;
+			margin: -21px -21px 10px -21px;
+			border-radius: $border-radius $border-radius 0px 0px;
+			> .app-logo {
+				width: 22px;
+				height: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 640px) {
+	.fifth-element-wrapper {
+		.fifth-element-1 {
+			float: left;
+			margin: 0px 805px 0px 120px;
+			transform: scale(0.925);
+		}
+	}
+
+	.login-container {
+		position: relative;
+		padding: 0px 20px 20px 20px;
+		height: -webkit-fill-available;
+
+		.login-wrapper {
+			padding: 20px;
+		}
+
+		.btn-login {
+			margin: 10px 0px 10px 0px;
+			width: -webkit-fill-available;
+		}
+
+		.login-masthead {
+			height: 60px;
+			color: #e6e6e6;
+			font-size: 18px;
+			font-weight: lighter;
+			background: $outline_color;
+			padding: 17px 0px 0px 40px;
+			margin: 0px -21px 60px -21px;
+			> .app-logo {
+				width: 22px;
+				height: 26px;
+				margin-right: 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,225 @@
+@import './variables.scss';
+
+.side-panel-dark {
+	transition: all 0.5s ease;
+	top: $app-header-height;
+	bottom: 0;
+	left: 0;
+	width: $side-panel-width;
+	opacity: 1;
+	position: absolute;
+	color: $text-color;
+	background: $outline_color;
+	border-right: 1.25px solid $outline_color;
+}
+
+.side-panel-light {
+	transition: all 0.5s ease;
+	top: $app-header-height;
+	bottom: 0;
+	left: 0;
+	width: $side-panel-width;
+	opacity: 1;
+	position: absolute;
+	color: $text-color;
+	background: $background_color;
+	border-right: 1.15px solid $dark-gray;
+}
+
+.side-panel-off {
+	transition: all 0.75s ease;
+	opacity: 100;
+
+	.menu-icon {
+		transform: scale(1.6);
+		padding: 0px 32px 0px 7px;
+	}
+
+	> .menu-item:focus {
+		color: $white;
+		background-color: $active-menu-background;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: white;
+		}
+	}
+
+	> .menu-item:hover {
+		color: $white;
+		background-color: $hover-menu-background;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: $seb-green;
+			transform-origin: center;
+			transform: scale(1.4);
+		}
+	}
+}
+
+.app-menu-dark {
+	font-size: 16px;
+	a {
+		font-weight: unset;
+	}
+
+	> .menu-item {
+		font-size: 15px;
+		display: block;
+		text-align: left;
+		text-decoration: none;
+		color: $white;
+		padding: 15px 0px 10px 30px;
+		&.active {
+			color: $white;
+			background-color: $active-menu-background;
+			padding: 15px 0px 10px 26px;
+			border-left: 4px solid $seb-green;
+			&.disabled {
+				border-left: 4px solid $menu-disabled-text-color;
+			}
+		}
+		&.disabled {
+			color: $menu-disabled-text-color;
+		}
+	}
+
+	> .menu-item:focus {
+		color: $white;
+		background-color: $active-menu-background;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: white;
+		}
+	}
+
+	> .menu-item:hover {
+		color: $white;
+		background-color: $hover-menu-background;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: $seb-green;
+			transform-origin: center;
+			transform: scale(1.4);
+		}
+	}
+}
+
+.app-menu-light {
+	font-size: 16px;
+	a {
+		font-weight: unset;
+	}
+
+	> .menu-item {
+		font-size: 15px;
+		display: block;
+		text-align: left;
+		text-decoration: none;
+		color: $black;
+		padding: 15px 0px 10px 30px;
+		&.active {
+			color: $black;
+			background-color: #d4d4d4;
+			padding: 15px 0px 10px 26px;
+			border-left: 4px solid $seb-green;
+			&.disabled {
+				border-left: 4px solid $menu-disabled-text-color;
+			}
+		}
+		&.disabled {
+			color: $menu-disabled-text-color;
+		}
+	}
+
+	.menu-item:focus {
+		color: $black;
+		background-color: #d4d4d4;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: $black;
+		}
+	}
+
+	.menu-item:hover {
+		color: $black;
+		background-color: #b4b4b4;
+		padding: 15px 0px 10px 26px;
+		border-left: 4px solid $seb-green;
+		&.disabled {
+			border-left: 4px solid $menu-disabled-text-color;
+			color: $menu-disabled-text-color;
+
+			.menu-icon {
+				color: $menu-disabled-text-color;
+			}
+		}
+
+		.menu-icon {
+			color: $black;
+			transform-origin: center;
+			transform: scale(1.4);
+		}
+	}
+}
+
+.menu-icon {
+	transform: scale(1.2);
+	padding: 0px 32px 0px 0px;
+}
+
+.app-version {
+	bottom: 0;
+	position: fixed;
+	font-size: 14px;
+	padding: 0px 0px 10px 50px;
+}

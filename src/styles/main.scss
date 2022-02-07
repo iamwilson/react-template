@@ -1,0 +1,18 @@
+// core
+@import '~@sebgroup/bootstrap/scss/bootstrap';
+@import '~font-awesome/css/font-awesome.css';
+
+// common
+@import './common/alert.scss';
+@import './common/app.scss';
+@import './common/header.scss';
+@import './common/loader.scss';
+@import './common/lightbox.scss';
+@import './common/notFound.scss';
+@import './common/search.scss';
+@import './common/sidePanel.scss';
+@import './common/user.scss';
+
+// components
+@import './login/login.scss';
+@import './modals/modal.scss';

@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+.light-box-on {
+	top: $app-header-height;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
+	z-index: 1000;
+	background-color: $light-box;
+}
+
+.light-box-off {
+	display: none;
+}
