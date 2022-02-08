@@ -1,0 +1,71 @@
+// variables
+$chip-y-spacing: 16px;
+$chip-x-spacing: 7px;
+$chip-button-width: $chip-y-spacing + $chip-x-spacing * 2;
+$chip-border-radius: 15px;
+$chip-background: #2196f3;
+$chip-color: #fff;
+$chip-min-height: 36px;
+
+#title {
+	letter-spacing: 1px;
+}
+
+.chips {
+	min-height: $chip-min-height;
+	border-bottom: 2px solid blue;
+	line-height: 1;
+	font-size: 1em;
+}
+
+.chips-input {
+	display: inline-block;
+	width: 33%;
+	min-height: $chip-min-height;
+	margin-bottom: $chip-x-spacing;
+	margin-left: $chip-x-spacing * 2;
+	border: 0;
+	outline: none;
+	font-size: 0.9rem;
+}
+
+.chip {
+	display: inline-block;
+	margin-top: $chip-x-spacing;
+	margin-bottom: $chip-x-spacing;
+	margin-left: $chip-x-spacing;
+	margin-right: $chip-button-width;
+	position: relative;
+
+	.chip-value {
+		display: inline-block;
+		padding: $chip-x-spacing;
+		padding-left: $chip-y-spacing;
+		padding-right: 8px;
+		background: $chip-background;
+		color: $chip-color;
+		font-weight: bold;
+		border-radius: $chip-border-radius 0 0 $chip-border-radius;
+	}
+
+	.chip-delete-button {
+		background: $chip-background;
+		color: $chip-color;
+		border: 0;
+		border-radius: 0 $chip-border-radius $chip-border-radius 0;
+		padding: $chip-x-spacing $chip-x-spacing * 2;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -$chip-button-width;
+		line-height: 0.5;
+		font-weight: bold;
+	}
+	.chip-delete-button:focus {
+		outline: none;
+	}
+	.fa-times-circle {
+		margin-right: -6px;
+	}
+}
