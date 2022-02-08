@@ -34,6 +34,7 @@
         "lodash.debounce": "^4.0.8",
         "material-table": "^1.69.3",
         "react": "^17.0.2",
+        "react-addons-update": "^15.6.3",
         "react-bootstrap": "^2.1.2",
         "react-dom": "^17.0.2",
         "react-redux": "^7.2.6",
