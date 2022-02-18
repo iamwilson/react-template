@@ -12,9 +12,9 @@ export const client = () => {
 	};
 
 	return {
-		get: (url: string, options = {}) => axios.get(url, { ...defaultOptions, ...options }),
-		post: (url: string, data: any, options = {}) => axios.post(url, data, { ...defaultOptions, ...options }),
-		put: (url: string, data: any, options = {}) => axios.put(url, data, { ...defaultOptions, ...options }),
-		delete: (url: string, options = {}) => axios.delete(url, { ...defaultOptions, ...options }),
+		get: (url: string, options = {}) => axios.get(url, { ...defaultOptions, ...options }).catch((error) => { return error?.response; }),
+		post: (url: string, data: any, options = {}) => axios.post(url, data, { ...defaultOptions, ...options }).catch((error) => { return error?.response; }),
+		put: (url: string, data: any, options = {}) => axios.put(url, data, { ...defaultOptions, ...options }).catch((error) => { return error?.response; }),
+		delete: (url: string, options = {}) => axios.delete(url, { ...defaultOptions, ...options }).catch((error) => { return error?.response; }),
 	};
 };
