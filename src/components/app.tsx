@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Notification } from '@sebgroup/react-components/Notification';
-import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 // components
 import { PublicRoute } from './routing';
@@ -10,6 +10,9 @@ import Loader from './common/loader';
 const Home = React.lazy(() => import('./home'));
 const Login = React.lazy(() => import('./login/login'));
 const NotFound = React.lazy(() => import('./common/notFound'));
+
+// hooks
+import { withRouter } from 'src/hooks/withRouter';
 
 // misc
 import * as appSetting from '@configs';
@@ -136,12 +139,14 @@ class App extends React.Component<IAppProps, IAppState> {
 					</Notification>
 
 					<React.Suspense fallback={<Loader showLoader={true} />}>
-						<Switch>
-							<Route exact={true} path={routePath.AppRoutes.Root} render={() => <Redirect to={routePath.AppRoutes.Home} />} />
+						<Routes>
+							<Route path={routePath.AppRoutes.Root}>
+								<Navigate to={routePath.AppRoutes.Home}></Navigate>
+							</Route>
 							<PublicRoute path={routePath.AppRoutes.Login} component={Login} props={sharedProps} />
 							<PublicRoute path={routePath.AppRoutes.Home} component={Home} props={sharedProps} />
 							<PublicRoute path={routePath.AppRoutes.NotFound} component={NotFound} props={sharedProps} />
-						</Switch>
+						</Routes>
 					</React.Suspense>
 				</div>
 			</>

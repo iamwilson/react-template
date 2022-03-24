@@ -3,7 +3,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PrivateRoute, PublicRoute } from './routing';
-import { Switch, withRouter } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 
 // components
 import Header from './common/header';
@@ -76,7 +76,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 					/>
 					<div className={this.state.toggleSidePanel === false ? 'content-container' : 'content-container-full'}>
 						<div className='content-wrapper'>
-							<Switch>
+							<Routes>
 								<PrivateRoute authenticated={true} exact={true} path={routePath.AppRoutes.Home} component={Default} props={this.props} />
 								<PublicRoute
 									path={routePath.AppRoutes.NotFound}
@@ -86,7 +86,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 										message: 'This feature is not available.',
 									}}
 								/>
-							</Switch>
+							</Routes>
 						</div>
 					</div>
 				</div>

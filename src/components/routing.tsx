@@ -1,6 +1,6 @@
 // core
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 // misc
 import NotFound from './common/notFound';

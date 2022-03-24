@@ -1,8 +1,8 @@
 // core
 import { AxiosRequestConfig } from 'axios';
-import { RouteComponentProps } from 'react-router';
+// import { RouteComponentProps } from 'react-router';
 
-export interface IAppSharedProps extends RouteComponentProps {
+export interface IAppSharedProps {
 	language: any;
 	policy: any;
 
