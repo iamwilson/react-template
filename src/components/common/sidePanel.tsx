@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import * as appSetting from '@configs';
 import * as routePath from '@constants/routePaths';
 
-const SidePanel: React.FC = (props: any) => {
+const SidePanel: React.FunctionComponent = (props: any) => {
 	return (
 		<>
 			<div

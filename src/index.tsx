@@ -1,8 +1,8 @@
 // core
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import React from 'react';
 
 // components
 import App from './components/app';
@@ -15,12 +15,13 @@ import './styles/main.scss';
 import { configureStore } from './store/configureStore';
 
 const store = configureStore();
+const container = document.getElementById('app');
+const root = createRoot(container);
 
-ReactDOM.render(
+root.render(
 	<Provider store={store}>
 		<HashRouter>
 			<App />
 		</HashRouter>
-	</Provider>,
-	document.getElementById('app')
+	</Provider>
 );

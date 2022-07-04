@@ -12,7 +12,7 @@ interface IRequestProps {
 	closeModal: () => void;
 }
 
-const Display: React.SFC<IRequestProps> = (props: IRequestProps) => {
+const Display: React.FC<IRequestProps> = (props: IRequestProps) => {
 	return (
 		<>
 			<PortalWrapper rootID='modal-portal'>

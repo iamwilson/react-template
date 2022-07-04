@@ -25,8 +25,8 @@ class Search extends React.Component<ISearchProps, ISearchState> {
 	}
 
 	componentDidMount() {
-		if (this.props.location.pathname.includes('/home/search/')) {
-			const searchKey = this.props.location.pathname.replace('/home/search/', '');
+		if (this.props?.location.pathname.includes('/home/search/')) {
+			const searchKey = this.props?.location.pathname.replace('/home/search/', '');
 			this.setState({ searchKey });
 		}
 	}

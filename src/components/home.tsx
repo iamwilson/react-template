@@ -45,7 +45,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 	logoutUser = () => {
 		sessionHelper.clearSession();
 		this.props.actions.setGuard(false);
-		this.props.history.replace('/');
+		this.props?.history.replace('/');
 	};
 
 	openUserMenu = () => {

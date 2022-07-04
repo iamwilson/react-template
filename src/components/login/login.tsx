@@ -124,13 +124,13 @@ class Login extends React.Component<ILoginProps, ILoginState> {
 				(data): void => {
 					this.props.actions.setGuard(true);
 					sessionHelper.initializeSession(data);
-					this.props.history.replace('/home');
+					this.props?.history.replace('/home');
 				},
 				(data): void => {
 					const errorMessage = data.response.data;
 					this.props.triggerNotification('Login Error : ' + errorMessage, AlertType.Danger, true);
 				},
-				this.props.history
+				this.props?.history
 			);
 		});
 	};
