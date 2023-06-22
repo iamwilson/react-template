@@ -34,7 +34,8 @@
 			"@svgs/*": ["./src/assets/svgs/*"],
 			"@lang/*": ["./src/assets/languages/*"],
 			"@configs": ["./src/configs/config.ts"],
-			"@styles/*": ["./src/styles/*"]
+			"@styles/*": ["./src/styles/*"],
+			"tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
 		}
 	},
 	"exclude": ["dist", "node_modules", "webpack", "coverage", "**/*.test.tsx"],
