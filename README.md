@@ -1,6 +1,6 @@
-# Name 
+# Imbalance Pulse
 
-React based template
+React based client
 
 ## Tech stack
 

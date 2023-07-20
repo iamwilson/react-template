@@ -3,7 +3,7 @@ import * as sessionHelper from '@utils/sessionHelper';
 import { AxiosConfigs } from '@interfaces/reduxModel';
 
 // client manifest
-export const APP_NAME = 'name';
+export const APP_NAME = 'MoodPulse';
 export const CLIENT_ID = 'id';
 export const CLIENT_SECRET = '$secret';
 

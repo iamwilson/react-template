@@ -1,13 +1,13 @@
 {
-    "author": "Mavericks",
-    "description": "React based client for administering",
+    "author": "Imbalance",
+    "description": "React based client for administering pulse API",
     "license": "MIT",
     "name": "name",
     "version": "1.0.0",
     "keywords": [
-        "",
-        "",
-        ""
+        "engagement",
+        "flexibility",
+        "wellbeing"
     ],
     "repository": {
         "type": "git",
