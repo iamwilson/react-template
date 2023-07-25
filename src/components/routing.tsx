@@ -5,25 +5,11 @@ import { Redirect, Route } from 'react-router-dom';
 // misc
 import NotFound from './common/notFound';
 
-export const PublicRoute = ({
-	component: Component,
-	props: Props,
-	...misc
-}) => {
-	return (
-		<Route
-			render={(props: any) => <Component {...props} {...Props} />}
-			{...misc}
-		/>
-	);
+export const PublicRoute = ({ component: Component, props: Props, ...misc }) => {
+	return <Route render={(props: any) => <Component {...props} {...Props} />} {...misc} />;
 };
 
-export const PrivateRoute = ({
-	authenticated,
-	component: Component,
-	props: Props,
-	...misc
-}) => {
+export const PrivateRoute = ({ authenticated, component: Component, props: Props, ...misc }) => {
 	return (
 		<Route
 			render={(props: any) =>
@@ -43,12 +29,7 @@ export const PrivateRoute = ({
 	);
 };
 
-export const ProtectedRoute = ({
-	canActivate,
-	component: Component,
-	props: Props,
-	...misc
-}) => {
+export const ProtectedRoute = ({ canActivate, component: Component, props: Props, ...misc }) => {
 	return (
 		<Route
 			render={(props: any) =>
