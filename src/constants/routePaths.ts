@@ -7,4 +7,8 @@ export const enum AppRoutes {
 
 export const enum HomeRoutes {
 	Default = AppRoutes.Home + '/default',
+	Profile = AppRoutes.Home + '/profile',
+	Dashboard = AppRoutes.Home + '/dashboard',
+	Report = AppRoutes.Home + '/report',
+	Settings = AppRoutes.Home + '/settings',
 }

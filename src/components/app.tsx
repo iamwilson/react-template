@@ -19,7 +19,7 @@ import { AlertType } from '@models/alertTypes';
 import { IAppSharedProps } from '@interfaces/reduxModel';
 import { IState } from '@interfaces/state';
 import english from '@lang/en-lang';
-import swedish from '@lang/sw-lang';
+import swedish from '@lang/dk-lang';
 
 interface IAppProps extends IAppSharedProps {
 	isLoading: any;

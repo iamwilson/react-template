@@ -7,7 +7,7 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		compress: true,
-		port: 5008,
+		port: 5001,
 	},
 	target: 'web',
 	resolve: {
