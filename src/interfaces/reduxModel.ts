@@ -5,6 +5,8 @@ import { AxiosRequestConfig } from 'axios';
 export interface IAppSharedProps {
 	language: any;
 	policy: any;
+	history: any;
+	location: any;
 
 	triggerAlert: (title: string, msg: string) => void;
 	triggerNotification: (msg: string, type?: any, persist?: boolean) => void;
