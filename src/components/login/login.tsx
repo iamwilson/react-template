@@ -6,9 +6,6 @@ import { connect } from 'react-redux';
 import { Textbox } from '@sebgroup/react-components/TextBox';
 import { withRouter } from 'react-router-dom';
 
-// constants
-const fifthElement = require('@svgs/polygon.svg').default;
-
 // misc
 import * as appSetting from '@configs';
 
@@ -69,11 +66,15 @@ class Login extends React.Component<ILoginProps, ILoginState> {
 
 		switch (key) {
 			case 'username':
-				usernameValid = validationHelper.isInputFilled(value) ? validationHelper.isInputNotNull(value) : true;
+				usernameValid = validationHelper.isInputFilled(value)
+					? validationHelper.isInputNotNull(value)
+					: true;
 				errors.username = usernameValid ? '' : 'Please key in the username.';
 				break;
 			case 'password':
-				passwordValid = validationHelper.isInputFilled(value) ? validationHelper.isInputNotNull(value) : true;
+				passwordValid = validationHelper.isInputFilled(value)
+					? validationHelper.isInputNotNull(value)
+					: true;
 				errors.password = passwordValid ? '' : 'Please key in the password.';
 				break;
 			default:
@@ -124,13 +125,17 @@ class Login extends React.Component<ILoginProps, ILoginState> {
 				(data): void => {
 					this.props.actions.setGuard(true);
 					sessionHelper.initializeSession(data);
-					this.props?.history.replace('/home');
+					this.props.history.replace('/home');
 				},
 				(data): void => {
 					const errorMessage = data.response.data;
-					this.props.triggerNotification('Login Error : ' + errorMessage, AlertType.Danger, true);
+					this.props.triggerNotification(
+						'Login Error : ' + errorMessage,
+						AlertType.Danger,
+						true
+					);
 				},
-				this.props?.history
+				this.props.history
 			);
 		});
 	};
@@ -145,10 +150,7 @@ class Login extends React.Component<ILoginProps, ILoginState> {
 	render() {
 		return (
 			<>
-				<div className='fifth-element-wrapper'>
-					<img className='fifth-element-1' src={fifthElement} />
-				</div>
-				<div className='login-container bg-secondary-element'>
+				<div className='login-container'>
 					<div className='login-masthead'>{appName}</div>
 					<div className='login-wrapper'>
 						<Textbox
@@ -174,7 +176,12 @@ class Login extends React.Component<ILoginProps, ILoginState> {
 							}}
 							type='password'
 						/>
-						<Button className='btn-login' onClick={() => this.validateForm(this.handleLogin)} />
+						<Button
+							className='btn-login mt-3'
+							onClick={() => this.validateForm(this.handleLogin)}
+						>
+							Login
+						</Button>
 					</div>
 				</div>
 			</>
@@ -194,4 +201,6 @@ const mapDispatchToProps = (dispatch: any) => {
 	};
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)<any>(Login));
+export default withRouter(
+	connect(mapStateToProps, mapDispatchToProps)<any>(Login)
+);

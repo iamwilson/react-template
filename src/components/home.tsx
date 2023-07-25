@@ -3,7 +3,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PrivateRoute, PublicRoute } from './routing';
-import { Routes } from 'react-router-dom';
+import { Switch, withRouter } from 'react-router-dom';
 
 // components
 import Header from './common/header';
@@ -45,7 +45,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 	logoutUser = () => {
 		sessionHelper.clearSession();
 		this.props.actions.setGuard(false);
-		this.props?.history.replace('/');
+		this.props.history.replace('/');
 	};
 
 	openUserMenu = () => {
@@ -74,10 +74,22 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 						{...this.props}
 						{...this.state}
 					/>
-					<div className={this.state.toggleSidePanel === false ? 'content-container' : 'content-container-full'}>
+					<div
+						className={
+							this.state.toggleSidePanel === false
+								? 'content-container'
+								: 'content-container-full'
+						}
+					>
 						<div className='content-wrapper'>
-							<Routes>
-								<PrivateRoute authenticated={true} exact={true} path={routePath.AppRoutes.Home} component={Default} props={this.props} />
+							<Switch>
+								<PrivateRoute
+									authenticated={true}
+									exact={true}
+									path={routePath.AppRoutes.Home}
+									component={Default}
+									props={this.props}
+								/>
 								<PublicRoute
 									path={routePath.AppRoutes.NotFound}
 									component={NotFound}
@@ -86,7 +98,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 										message: 'This feature is not available.',
 									}}
 								/>
-							</Routes>
+							</Switch>
 						</div>
 					</div>
 				</div>
@@ -107,4 +119,6 @@ const mapDispatchToProps = (dispatch: any) => {
 	};
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)<any>(Home));
+export default withRouter(
+	connect(mapStateToProps, mapDispatchToProps)<any>(Home)
+);

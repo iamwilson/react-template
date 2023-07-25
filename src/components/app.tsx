@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Notification } from '@sebgroup/react-components/Notification';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 
 // components
 import { PublicRoute } from './routing';
@@ -10,9 +10,6 @@ import Loader from './common/loader';
 const Home = React.lazy(() => import('./home'));
 const Login = React.lazy(() => import('./login/login'));
 const NotFound = React.lazy(() => import('./common/notFound'));
-
-// hooks
-import { withRouter } from 'src/hooks/withRouter';
 
 // misc
 import * as appSetting from '@configs';
@@ -65,14 +62,18 @@ class App extends React.Component<IAppProps, IAppState> {
 
 	loadAppLanguage() {
 		const langCode = localStorage.getItem('langCode');
-		langCode == null ? this.setLanguage(appSetting.config.language) : this.setLanguage(langCode);
+		langCode == null
+			? this.setLanguage(appSetting.config.language)
+			: this.setLanguage(langCode);
 		const language = langCode === appSetting.ENG ? english : swedish;
 		this.setState({ langCode, language });
 	}
 
 	loadAppTheme() {
 		const theme = localStorage.getItem('theme');
-		theme == null ? this.setTheme(appSetting.config.theme) : this.setTheme(theme);
+		theme == null
+			? this.setTheme(appSetting.config.theme)
+			: this.setTheme(theme);
 		this.setState({ theme });
 	}
 
@@ -97,7 +98,11 @@ class App extends React.Component<IAppProps, IAppState> {
 		this.setTheme(theme);
 	};
 
-	triggerNotification(message: string, type: AlertType, persist: boolean = false) {
+	triggerNotification(
+		message: string,
+		type: AlertType,
+		persist: boolean = false
+	) {
 		this.setState({
 			alertMessage: message,
 			alertToggle: true,
@@ -133,20 +138,35 @@ class App extends React.Component<IAppProps, IAppState> {
 						toggle={this.state.alertToggle}
 						onDismiss={() => {
 							this.setState({ alertToggle: false });
-						}}>
+						}}
+					>
 						<div className='notification-header'>Notification</div>
 						<div className='notification-body'>{this.state.alertMessage}</div>
 					</Notification>
 
 					<React.Suspense fallback={<Loader showLoader={true} />}>
-						<Routes>
-							<Route path={routePath.AppRoutes.Root}>
-								<Navigate to={routePath.AppRoutes.Home}></Navigate>
-							</Route>
-							<PublicRoute path={routePath.AppRoutes.Login} component={Login} props={sharedProps} />
-							<PublicRoute path={routePath.AppRoutes.Home} component={Home} props={sharedProps} />
-							<PublicRoute path={routePath.AppRoutes.NotFound} component={NotFound} props={sharedProps} />
-						</Routes>
+						<Switch>
+							<Route
+								exact={true}
+								path={routePath.AppRoutes.Root}
+								render={() => <Redirect to={routePath.AppRoutes.Home} />}
+							/>
+							<PublicRoute
+								path={routePath.AppRoutes.Login}
+								component={Login}
+								props={sharedProps}
+							/>
+							<PublicRoute
+								path={routePath.AppRoutes.Home}
+								component={Home}
+								props={sharedProps}
+							/>
+							<PublicRoute
+								path={routePath.AppRoutes.NotFound}
+								component={NotFound}
+								props={sharedProps}
+							/>
+						</Switch>
 					</React.Suspense>
 				</div>
 			</>

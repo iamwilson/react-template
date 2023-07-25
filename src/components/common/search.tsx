@@ -1,6 +1,7 @@
 // core
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 // misc
 import { IAppSharedProps } from '@interfaces/reduxModel';
@@ -25,14 +26,20 @@ class Search extends React.Component<ISearchProps, ISearchState> {
 	}
 
 	componentDidMount() {
-		if (this.props?.location.pathname.includes('/home/search/')) {
-			const searchKey = this.props?.location.pathname.replace('/home/search/', '');
+		if (this.props.location.pathname.includes('/home/search/')) {
+			const searchKey = this.props.location.pathname.replace(
+				'/home/search/',
+				''
+			);
 			this.setState({ searchKey });
 		}
 	}
 
 	componentDidUpdate(prevProps: any) {
-		if (prevProps.location.pathname.includes('/home/search/') && !this.props.location.pathname.includes('/home/search/')) {
+		if (
+			prevProps.location.pathname.includes('/home/search/') &&
+			!this.props.location.pathname.includes('/home/search/')
+		) {
 			this.setState({ searchKey: '' });
 		}
 	}
@@ -84,7 +91,10 @@ class Search extends React.Component<ISearchProps, ISearchState> {
 							}}
 						/>
 
-						<button className='btn btn-search' onClick={(e) => this.handleSearch(e)}>
+						<button
+							className='btn btn-search'
+							onClick={(e) => this.handleSearch(e)}
+						>
 							<i className='fa fa-search' />
 						</button>
 					</div>

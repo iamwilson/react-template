@@ -6,42 +6,74 @@ import { NavLink } from 'react-router-dom';
 import * as appSetting from '@configs';
 import * as routePath from '@constants/routePaths';
 
-const SidePanel: React.FunctionComponent = (props: any) => {
+const SidePanel: React.FC<any> = (props: any) => {
 	return (
 		<>
 			<div
 				className={
-					props.toggleSidePanel === false ? (props.theme === appSetting.DARK_MODE ? 'side-panel-dark' : 'side-panel-light') : 'side-panel-off'
-				}>
-				<div className={props.theme === appSetting.DARK_MODE ? 'app-menu-dark' : 'app-menu-light'}>
-<<<<<<< HEAD
+					props.toggleSidePanel === false
+						? props.theme === appSetting.DARK_MODE
+							? 'side-panel-dark'
+							: 'side-panel-light'
+						: 'side-panel-off'
+				}
+			>
+				<div
+					className={
+						props.theme === appSetting.DARK_MODE
+							? 'app-menu-dark'
+							: 'app-menu-light'
+					}
+				>
 					<NavLink
-						className={(navData) => (navData.isActive ? 'menu-item active' : 'menu-item')}
+						className='menu-item'
+						activeClassName='active'
+						exact={true}
 						to={routePath.HomeRoutes.Default.toString()}
-						replace={true}>
-						<i className='menu-icon fa fa-cloud' />
-						{'Default'}
-=======
-					<NavLink className='menu-item' activeClassName='active' exact={true} to={routePath.HomeRoutes.Default.toString()} replace={true}>
+						replace={true}
+					>
 						<i className='menu-icon fa fa-home' />
 						{'Home'}
 					</NavLink>
-					<NavLink className='menu-item' activeClassName='active' exact={true} to={routePath.HomeRoutes.Profile.toString()} replace={true}>
+					<NavLink
+						className='menu-item'
+						activeClassName='active'
+						exact={true}
+						to={routePath.HomeRoutes.Profile.toString()}
+						replace={true}
+					>
 						<i className='menu-icon fa fa-user' />
 						{'Profile'}
 					</NavLink>
-					<NavLink className='menu-item' activeClassName='active' exact={true} to={routePath.HomeRoutes.Dashboard.toString()} replace={true}>
+					<NavLink
+						className='menu-item'
+						activeClassName='active'
+						exact={true}
+						to={routePath.HomeRoutes.Dashboard.toString()}
+						replace={true}
+					>
 						<i className='menu-icon fa fa-tachometer ' />
 						{'Dashboard'}
 					</NavLink>
-					<NavLink className='menu-item' activeClassName='active' exact={true} to={routePath.HomeRoutes.Report.toString()} replace={true}>
+					<NavLink
+						className='menu-item'
+						activeClassName='active'
+						exact={true}
+						to={routePath.HomeRoutes.Report.toString()}
+						replace={true}
+					>
 						<i className='menu-icon fa fa-file-text' />
 						{'Reports'}
 					</NavLink>
-					<NavLink className='menu-item' activeClassName='active' exact={true} to={routePath.HomeRoutes.Settings.toString()} replace={true}>
+					<NavLink
+						className='menu-item'
+						activeClassName='active'
+						exact={true}
+						to={routePath.HomeRoutes.Settings.toString()}
+						replace={true}
+					>
 						<i className='menu-icon fa fa-cogs' />
 						{'Settings'}
->>>>>>> master
 					</NavLink>
 				</div>
 			</div>

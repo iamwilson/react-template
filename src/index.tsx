@@ -16,7 +16,6 @@ import { configureStore } from './store/configureStore';
 
 const store = configureStore();
 const container = document.getElementById('app');
-const root = createRoot(container);
 
 const root = ReactDOM.createRoot(document.getElementById('app') as HTMLElement);
 
