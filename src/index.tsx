@@ -1,8 +1,8 @@
 // core
-import React from 'react';
-import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 // components
 import App from './components/app';
@@ -18,10 +18,14 @@ const store = configureStore();
 const container = document.getElementById('app');
 const root = createRoot(container);
 
+const root = ReactDOM.createRoot(document.getElementById('app') as HTMLElement);
+
 root.render(
-	<Provider store={store}>
-		<HashRouter>
-			<App />
-		</HashRouter>
-	</Provider>
+	<React.StrictMode>
+		<Provider store={store}>
+			<HashRouter>
+				<App />
+			</HashRouter>
+		</Provider>
+	</React.StrictMode>
 );

@@ -49,7 +49,7 @@ const User: React.FC<IUserProps> = (props: any) => {
 								onChange={(e) => props.switchLanguage(e)}
 								value={props?.langCode ? props.langCode : ''}>
 								<option value='en'>English</option>
-								<option value='sw'>Svenska</option>
+								<option value='sw'>Danish</option>
 							</select>
 							<span className='ml-2'>
 								<img className='lang-flag' src={props.langCode === 'en' ? en : sw} />

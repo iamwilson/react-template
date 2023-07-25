@@ -2,7 +2,7 @@
 import React from 'react';
 
 // constants
-const Logo = require('@images/SEBLogo.png').default;
+const Logo = require('@images/logo.png').default;
 
 // components
 import Search from './search';
@@ -27,7 +27,7 @@ const Header = (props: IHeaderProps) => {
 							<img className='app-logo' src={Logo} />
 						</a>
 					</div>
-					<div className='app-name'>{appSetting.APP_NAME}</div>
+					{/* <div className='app-name'>{appSetting.APP_NAME}</div> */}
 				</div>
 
 				<Search />
